@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-
 export default function MitraKlienPage() {
   const partners = [
     { name: 'Peplink', logo: 'PEPLINK.png' },

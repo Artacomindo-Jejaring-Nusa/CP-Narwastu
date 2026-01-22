@@ -1,5 +1,18 @@
 // src/app/page.tsx
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Beranda",
+  description: "PT. Narwastu Artha Tama - Solusi IT Inovatif, Terdepan dan Terpercaya. Melayani Network Infrastructure, Security, Managed Services, dan Software Development sejak 2014.",
+  keywords: ["IT Solution", "Network Infrastructure", "Security", "Managed Services", "Software Development", "IT Consultant", "Narwastu"],
+  openGraph: {
+    title: "PT. Narwastu Artha Tama - Solusi IT Inovatif & Terpercaya",
+    description: "Penyedia solusi IT yang inovatif, terdepan dan terpercaya sejak 2014. 10+ tahun pengalaman, 100+ klien, 500+ proyek selesai.",
+    url: "https://narwastu.com",
+    type: "website",
+  },
+};
 
 export default function HomePage() {
   return (

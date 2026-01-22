@@ -1,4 +1,17 @@
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Grup Perusahaan",
+  description: "Grup perusahaan PT. Narwastu Artha Tama: PT. Artacomindo Jejaring Nusa dan PT. Artacomindotama. Sinergi kekuatan untuk layanan yang lebih luas dan terintegrasi.",
+  keywords: ["Grup Perusahaan", "Anak Perusahaan", "Artacomindo", "Artacomindotama", "VSAT", "ICT", "Narwastu Group"],
+  openGraph: {
+    title: "Grup Perusahaan | PT. Narwastu Artha Tama",
+    description: "Mengenal dua pilar utama grup Narwastu: PT. Artacomindo Jejaring Nusa (VSAT & Internet) dan PT. Artacomindotama (ICT Services).",
+    url: "https://narwastu.com/grup-kami",
+    type: "website",
+  },
+};
 
 export default function GrupKamiPage() {
   return (

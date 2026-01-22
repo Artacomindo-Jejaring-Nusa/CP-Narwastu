@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow specific directories if needed
+# Disallow: /admin/
+# Disallow: /api/
+
+# Sitemap location
+Sitemap: https://narwastu.com/sitemap.xml
