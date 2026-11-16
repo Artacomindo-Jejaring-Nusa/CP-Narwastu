@@ -1,3 +1,4 @@
+# Next.js Static Export Apache Configuration
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteBase /
@@ -7,12 +8,20 @@
   RewriteCond %{REQUEST_URI} (.+)/$
   RewriteRule ^ %1 [L,R=301]
 
-  # Serve .html file if it exists for clean URLs
+  # Serve .html file if it exists (e.g. /tentang-kami -> tentang-kami.html)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-  RewriteRule ^(.+?)/?$ $1.html [L]
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+)$ $1.html [L]
 </IfModule>
 
-# Fallback 404
+# Custom 404
 ErrorDocument 404 /404.html
+
+# Proper MIME types
+<IfModule mod_mime.c>
+  AddType text/css .css
+  AddType application/javascript .js
+  AddType image/svg+xml .svg
+  AddType font/woff2 .woff2
+</IfModule>
