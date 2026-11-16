@@ -6,6 +6,7 @@ import "./globals.css";
 // Import komponen
 import Header from "../app/components/Header";
 import Footer from "../app/components/Footer";
+import SmoothScroll from "../app/components/SmoothScroll";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -119,9 +120,11 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <SmoothScroll>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

@@ -7,7 +7,6 @@ import { useState } from 'react';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isAboutDropdownOpen, setIsAboutDropdownOpen] = useState(false);
 
   return (
@@ -86,26 +85,41 @@ export default function Header() {
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden transition-all duration-300 ${isMenuOpen ? 'max-h-64 mt-4' : 'max-h-0 overflow-hidden'}`}>
-          <div className="py-4 space-y-4 border-t border-gray-100">
+        <div className={`md:hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 mt-4 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+          <div className="py-4 space-y-3.5 border-t border-gray-100">
             <Link 
               href="/" 
-              className="block text-gray-700 hover:text-red-700 font-medium transition-colors duration-200"
+              className="block text-gray-700 hover:text-red-700 font-medium transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Beranda
             </Link>
             <Link 
               href="/layanan" 
-              className="block text-gray-700 hover:text-red-700 font-medium transition-colors duration-200"
+              className="block text-gray-700 hover:text-red-700 font-medium transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Layanan
             </Link>
-            <Link href="/tentang-kami" className="block text-gray-700 hover:text-red-700 font-medium" onClick={() => setIsMobileMenuOpen(false)}>Profil Perusahaan</Link>
-            <Link href="/grup-kami" className="block text-gray-700 hover:text-red-700 font-medium" onClick={() => setIsMobileMenuOpen(false)}>Grup Kami</Link>
-            <Link href="/mitra-klien" className="block text-gray-700 hover:text-red-700 font-medium" onClick={() => setIsMobileMenuOpen(false)}>Mitra & Klien</Link>
-
+            <div className="pl-3 border-l-2 border-red-200 space-y-2.5 my-2">
+              <span className="text-xs font-semibold text-gray-400 uppercase tracking-wider block">Tentang Kami</span>
+              <Link href="/tentang-kami" className="block text-sm text-gray-700 hover:text-red-700" onClick={() => setIsMenuOpen(false)}>
+                Profil Perusahaan
+              </Link>
+              <Link href="/grup-kami" className="block text-sm text-gray-700 hover:text-red-700" onClick={() => setIsMenuOpen(false)}>
+                Grup Kami
+              </Link>
+              <Link href="/mitra-klien" className="block text-sm text-gray-700 hover:text-red-700" onClick={() => setIsMenuOpen(false)}>
+                Mitra &amp; Klien
+              </Link>
+            </div>
+            <Link 
+              href="/kontak" 
+              className="block text-center bg-red-700 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-red-800 transition-colors mt-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Hubungi Kami
+            </Link>
           </div>
         </div>
       </nav>
