@@ -1,4 +1,17 @@
 // src/app/terms-of-service/page.tsx
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Syarat dan Ketentuan Layanan",
+  description: "Syarat dan ketentuan layanan serta aturan penggunaan situs web dan layanan PT. Narwastu Artha Tama.",
+  alternates: {
+    canonical: 'https://narwastuarthatama.com/terms-of-service',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 // Komponen Ikon (untuk membuat kode lebih rapi)
 const IconWrapper = ({ children }: { children: React.ReactNode }) => (

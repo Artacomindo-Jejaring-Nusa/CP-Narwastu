@@ -1,4 +1,17 @@
 // src/app/privacy-policy/page.tsx
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Kebijakan Privasi",
+  description: "Kebijakan privasi PT. Narwastu Artha Tama mengenai pengumpulan, penggunaan, dan perlindungan data pribadi pengguna.",
+  alternates: {
+    canonical: 'https://narwastuarthatama.com/privacy-policy',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 // Komponen Ikon (untuk membuat kode lebih rapi)
 const IconWrapper = ({ children }: { children: React.ReactNode }) => (

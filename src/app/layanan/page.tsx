@@ -6,10 +6,13 @@ export const metadata: Metadata = {
   title: "Layanan",
   description: "Layanan IT komprehensif PT. Narwastu Artha Tama: Network Infrastructure, Network Security, Managed Services, Finance Switching System, Maintenance BTS, dan Software Development.",
   keywords: ["Layanan IT", "Network Infrastructure", "Network Security", "Managed Services", "Finance Switching", "Maintenance BTS", "Software Development", "IT Services"],
+  alternates: {
+    canonical: 'https://narwastuarthatama.com/layanan',
+  },
   openGraph: {
     title: "Layanan & Solusi IT Terdepan | PT. Narwastu Artha Tama",
     description: "Solusi teknologi komprehensif untuk bisnis modern. Network infrastructure, security, managed services, hingga software development dengan standar enterprise terbaik.",
-    url: "https://narwastu.com/layanan",
+    url: "https://narwastuarthatama.com/layanan",
     type: "website",
   },
 };
